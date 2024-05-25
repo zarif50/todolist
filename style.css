@@ -8,25 +8,49 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;/*declaring font family*/
+  font-family: 'Roboto', sans-serif;/* declaring font family */
   height: 100vh;
-  display: flex;/* scoll or adjust with window*/
-  align-items: center;/* middle center thakbe*/
+  display: flex;/* scroll or adjust with window */
+  align-items: center;/* middle center thakbe */
   justify-content: center;
-  background: url(./9203811.jpg) no-repeat;/* backgrounf no repeat*/
-  background-position: center;/* setting position at center*/
-  background-size: cover;/* pura window cover*/
+  background: url(./9203811.jpg) no-repeat;/* background no repeat */
+  background-position: center;/* setting position at center */
+  background-size: cover;/* pura window cover */
 }
 
 .background-container {
+  position: relative; /* Add this line */
   width: 400px;
   height: auto;
-  min-height: 400px;
-  padding: 30px;
+  min-height: 300px;
+  padding: 35px;
   background: transparent;
-  border: 2px solid #e6b7eca1;
-  border-radius: 10px;/* ektu circular hobe*/
+  border: 4px solid #e6b7eca1;
+  border-radius: 12px;/* ektu circular hobe */
   backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 300px;
+  height: 250px;
+  background: linear-gradient(0deg, transparent, transparent, #c94bdc, #c94bdc, #c94bdc);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
@@ -38,7 +62,7 @@ h1 {
 .input-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .todo-input {
@@ -96,7 +120,7 @@ h1 {
 }
 
 .todo:hover {
-  background-color:#e6b7eca1;
+  background-color: #e6b7eca1;
 }
 
 .todo label {
@@ -129,7 +153,7 @@ input[type='checkbox'] {
 }
 
 input:checked + span {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .todo:hover input:checked + span::before, input:checked + span::before {
@@ -141,7 +165,7 @@ input:checked + span {
   border-color: #eee;
 }
 
-.todo .delete-btn  {
+.todo .delete-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -149,25 +173,25 @@ input:checked + span {
   font-size: 24px;
 }
 
-.todos-container  {
+.todos-container {
   height: 300px;
   overflow: overlay;
 }
 
-.todos-container::-webkit-scrollbar-track  {
+.todos-container::-webkit-scrollbar-track {
   background: rgb(247, 247, 247);
-  border-radius: 20px
+  border-radius: 20px;
 }
 
-.todos-container::-webkit-scrollbar  {
+.todos-container::-webkit-scrollbar {
   width: 0;
 }
 
-.todos-container:hover::-webkit-scrollbar  {
+.todos-container:hover::-webkit-scrollbar {
   width: 7px;
 }
 
-.todos-container::-webkit-scrollbar-thumb  {
+.todos-container::-webkit-scrollbar-thumb {
   background: #d5d5d5;
   border-radius: 20px;
 }
