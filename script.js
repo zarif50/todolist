@@ -68,7 +68,7 @@ input.addEventListener("keyup", e => {
   /* input nibo input .value call kore*/
   let todo = input.value.trim();
   console.log(todo);
-  /*jodi ascii character and jodi kichu na lekhe enter dile kono todo list add hobe na*/
+  /*jodi kono kichu na lekhe input dile kichu return korbe na*/
   if (!todo || e.key != "Enter") {
     return;
   }
