@@ -11,21 +11,21 @@ body {
   font-family: 'Roboto', sans-serif;/*declaring font family*/
   height: 100vh;
   display: flex;/* scoll or adjust with window*/
-  align-items: center;
+  align-items: center;/* middle center thakbe*/
   justify-content: center;
-  background: url(.9203811.jpg) no-repeat;/* backgrounf no repeat*/
+  background: url(./9203811.jpg) no-repeat;/* backgrounf no repeat*/
   background-position: center;/* setting position at center*/
-  background-size: cover;
+  background-size: cover;/* pura window cover*/
 }
 
-.container {
+.background-container {
   width: 400px;
   height: auto;
   min-height: 400px;
   padding: 30px;
   background: transparent;
   border: 2px solid #e6b7eca1;
-  border-radius: 10px;
+  border-radius: 10px;/* ektu circular hobe*/
   backdrop-filter: blur(15px);
 }
 
